@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Безопасный Алматы — 2025</title>
+  <meta name="description" content="Анализ и предложения по криминогенной ситуации в Алматы в 2025 году. Статистика, виды преступлений, пути предотвращения и полезные советы." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#00b4d8; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071124 0%, #071a2a 100%);color:#e6eef8;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0077b6);display:flex;align-items:center;justify-content:center;font-weight:800;color:#021124}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:#fff}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.6);}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin-top:8px}
+    .kpi{display:flex;gap:12px;margin-top:18px}
+    .kpi .item{flex:1;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),var(--glass));text-align:center}
+    .small{font-size:13px;color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .menu{display:flex;gap:12px;flex-wrap:wrap}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr 1fr}.menu{justify-content:center}}
+    @media(max-width:560px){.grid-3{grid-template-columns:1fr}.nav-desktop{display:none}.nav-mobile{display:flex}}
+    .nav-mobile{display:none}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#021124;font-weight:700;text-decoration:none}
+    .section{margin-top:28px}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    @media(max-width:980px){.two-col{grid-template-columns:1fr}}
+    .list-compact li{margin-bottom:8px}
+    .case{display:flex;gap:12px;align-items:flex-start}
+    .case .dot{width:10px;height:10px;border-radius:50%;background:#ffb703;margin-top:6px}
+    .muted-block{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px;color:var(--muted)}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .lang-switch{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">БA</div>
+        <div>
+          <div style="font-weight:800">Безопасный Алматы</div>
+          <div class="small">Аналитика и рекомендации — 2025</div>
+        </div>
+      </div>
+      <nav class="nav-desktop">
+        <a href="#stats">Статистика</a>
+        <a href="#types">Виды преступлений</a>
+        <a href="#prevention">Пути предотвращения</a>
+        <a href="#cases">Примеры</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="nav-mobile">
+        <button class="btn" onclick="document.querySelector('.nav-desktop').classList.toggle('open')">Меню</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>«Безопасный Алматы»</h1>
+        <p class="lead">Сайт для отображения, анализа и предложений по снижению преступности в городе Алматы — официальная статистика, виды преступлений, меры профилактики и практические советы.</p>
+        <div class="kpi">
+          <div class="item"><div class="small">Население</div><div style="font-weight:800;font-size:20px">2,3 млн</div></div>
+          <div class="item"><div class="small">Доля преступлений (1‑половина 2025)</div><div style="font-weight:800;font-size:20px">18–19%</div></div>
+          <div class="item"><div class="small">Текущий год</div><div style="font-weight:800;font-size:20px">2025</div></div>
+        </div>
+
+        <div class="grid-3">
+          <div class="muted-block"><strong>Цель:</strong><br>Понимать масштаб и предлагать практические меры.</div>
+          <div class="muted-block"><strong>Аудитория:</strong><br>Горожане, журналисты, органы власти, НПО.</div>
+          <div class="muted-block"><strong>Данные:</strong><br>Официальные сводки, аналитика, медиа-кейсы.</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Быстрые ссылки / Жедел сілтемелер</h3>
+        <div class="menu">
+          <a class="btn" href="#stats">Статистика</a>
+          <a class="btn" href="#types">Виды преступлений</a>
+          <a class="btn" href="#prevention">Профилактика</a>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="small">Экстренные номера</div>
+          <div style="font-weight:800;margin-top:6px">102 — Полиция<br>111 — Телефон доверия</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Statistics -->
+    <section id="stats" class="section card">
+      <h2>Статистика / Статистика</h2>
+      <p class="small">В 2025 году количество зарегистрированных уголовных правонарушений в Алматы стало одним из самых высоких показателей по республике.</p>
+
+      <div class="two-col" style="margin-top:14px">
+        <div>
+          <canvas id="crimePie" height="280"></canvas>
+          <div style="margin-top:10px" class="small">Распределение видов преступлений (примерные проценты, 1‑половина 2025).</div>
+        </div>
+        <div>
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <strong>Динамика по годам</strong>
+            <canvas id="trendLine" height="200"></canvas>
+            <div class="small" style="margin-top:8px">Сравнение 2023 — 2025 (индекс: 2023=100).</div>
+          </div>
+
+          <div class="card" style="padding:12px">
+            <strong>Сводка по видам</strong>
+            <ul class="list-compact" style="margin-top:8px">
+              <li>Мошенничество — 34%</li>
+              <li>Кража — 23%</li>
+              <li>Наркопреступления — 6.3%</li>
+              <li>Убийство — 0.4%</li>
+              <li>Изнасилование — 0.3%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types -->
+    <section id="types" class="section card">
+      <h2>Виды преступлений / Қылмыс түрлері</h2>
+      <p class="small">Наиболее часто встречающиеся виды преступлений в Алматы и краткое описание.</p>
+
+      <div style="margin-top:12px">
+        <h4>Мошенничество</h4>
+        <p class="muted-block">Хищение денег через интернет, фиктивные сделки, телефонное мошенничество. <em>Совет:</em> проверяйте продавцов, используйте защищённые способы оплаты.</p>
+
+        <h4>Кража</h4>
+        <p class="muted-block">Квартирные кражи, угоны, карманные кражи. <em>Совет:</em> не оставляйте ценные вещи на виду, используйте сигнализацию.</p>
+
+        <h4>Наркотрафик</h4>
+        <p class="muted-block">Хранение, сбыт, распространение. <em>Совет:</em> участвуйте в профилактических программах, сообщайте о подозрениях в полицию.</p>
+
+        <h4>Насильственные преступления</h4>
+        <p class="muted-block">Бытовые конфликты, драки, изнасилования, убийства. <em>Совет:</em> избегайте эскалации конфликтов, знайте контакты экстренных служб.</p>
+
+        <h4>Киберпреступления</h4>
+        <p class="muted-block">Преступления в соцсетях, мошенничество с картами. <em>Совет:</em> обновляйте пароли, включайте двухфакторную аутентификацию.</p>
+      </div>
+    </section>
+
+    <!-- Prevention -->
+    <section id="prevention" class="section card">
+      <h2>Пути предотвращения / Алдын алу жолдары</h2>
+      <p class="small">Профилактика — обязанность общества и власти. Рекомендуемые меры:</p>
+      <ul class="list-compact" style="margin-top:8px">
+        <li>Усиление видеонаблюдения в общественных местах.</li>
+        <li>Повышение оперативности реагирования полиции.</li>
+        <li>Информационные кампании против мошенничества.</li>
+        <li>Программы профилактики наркомании и алкоголизма.</li>
+        <li>Обучение правовой грамотности среди молодежи.</li>
+      </ul>
+
+      <div style="margin-top:12px" class="card">
+        <strong>Как защитить себя?</strong>
+        <ol style="margin-top:8px">
+          <li>Не переходите по подозрительным ссылкам и не переводите деньги незнакомцам.</li>
+          <li>Не храните большие суммы наличных и ценные вещи на виду.</li>
+          <li>Сохраняйте контакт с соседями — коллективная бдительность работает.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section id="cases" class="section card">
+      <h2>Примеры и ситуации / Мысалдар мен жағдайлар</h2>
+      <p class="small">Короткие кейсы и мини-советы.</p>
+
+      <div style="margin-top:10px;display:grid;gap:12px">
+        <div class="case card">
+          <div class="dot"></div>
+          <div>
+            <strong>Интернет-мошенничество</strong>
+            <p class="small">Житель потерял деньги, купив несуществующий товар в интернет-магазине. <em>Совет:</em> проверяйте отзывы, оплачивайте только защищёнными способами.</p>
+          </div>
+        </div>
+
+        <div class="case card">
+          <div class="dot"></div>
+          <div>
+            <strong>Карманная кража</strong>
+            <p class="small">Кошелек украли в общественном транспорте. <em>Совет:</em> держите сумку перед собой, используйте карманы на замке.</p>
+          </div>
+        </div>
+
+        <div class="case card">
+          <div class="dot"></div>
+          <div>
+            <strong>Подросток и наркотики</strong>
+            <p class="small">Подросток задержан за хранение наркотиков. <em>Совет:</em> информируйте молодежь о последствиях, участвуйте в профилактике.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="section card">
+      <h2>Контакты / Байланыс</h2>
+      <p class="small">Если вы стали свидетелем преступления — обращайтесь по экстренным номерам:</p>
+      <div style="font-weight:800;margin-top:8px">102 — Полиция<br>111 — Детский телефон доверия</div>
+      <p class="small" style="margin-top:8px">Официальный сайт ДВД г. Алматы: <a href="https://polisia.kz/ru/" target="_blank" style="color:var(--accent)">police.gov.kz</a></p>
+
+      <div style="margin-top:12px" class="two-col">
+        <div>
+          <form onsubmit="event.preventDefault(); alert('Спасибо — ваш комментарий отправлен (демо).'); this.reset();">
+            <label class="small">Ваше имя</label>
+            <input required placeholder="Имя" />
+            <label class="small" style="margin-top:8px">Email</label>
+            <input type="email" required placeholder="example@mail.kz" />
+            <label class="small" style="margin-top:8px">Комментарий</label>
+            <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
+            <div style="margin-top:10px"><button class="btn" type="submit">Отправить</button></div>
+          </form>
+        </div>
+        <aside>
+          <div class="muted-block">Автор проекта: <br><strong>Команда «Безопасный Алматы»</strong><br>Краткая информация об авторе/организации.</div>
+          <div style="margin-top:10px" class="muted-block">Приватность: данные формы не сохраняются на этом демо-сайте.</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="small">
+      © 2025 «Безопасный Алматы». Материалы сайта — информационные. Для использования данных в официальных документах обращайтесь к правоохранительным органам.
+    </footer>
+  </div>
+
+  <script>
+    // Chart: pie
+    const pieCtx = document.getElementById('crimePie').getContext('2d');
+    const pie = new Chart(pieCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Мошенничество','Кража','Наркопреступления','Убийство','Изнасилование','Прочие'],
+        datasets: [{
+          data: [34,23,6.3,0.4,0.3,35],
+          hoverOffset: 8
+        }]
+      },
+      options: {plugins:{legend:{labels:{color:'#cbd5e1'}}}}
+    });
+
+    // Chart: trend
+    const lineCtx = document.getElementById('trendLine').getContext('2d');
+    const line = new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['2023','2024','2025 (половина)'],
+        datasets:[{label:'Индекс регистраций (2023=100)',data:[100,118,128],tension:0.3,pointRadius:4}]
+      },
+      options:{scales:{y:{beginAtZero:false}},plugins:{legend:{display:false}}}
+    });
+  </script>
+</body>
+</html>
